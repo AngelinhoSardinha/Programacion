@@ -16,7 +16,7 @@ class autobus_interurbano {
     - ruta
     - kilometros
     --Metodos--
-    + calculoTicket(ruta, kilometros)
+    + calculoTicket(ruta, kilometros, ticket_precio_base)
 }
 
 class conductor {
