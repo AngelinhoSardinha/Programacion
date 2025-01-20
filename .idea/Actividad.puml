@@ -4,24 +4,26 @@ abstract class autobuses {
     - id : Int
     - conductor : String
     - ticket_precio_base : Double
+    --Metodos--
+    + {abstract} calcularSuperrecio() : Double
 }
 
 class autobus_urbano {
     - ruta_A : Boolean
     --Metodos--
-    + calculoTicketRuta(ruta_A, ticket_precio_base)
+    + calculoTicketRuta(ruta_A, ticket_precio_base) : Double
 }
 
 class autobus_interurbano {
-    - ruta
-    - kilometros
+    - ruta : String
+    - kilometros : Int
     --Metodos--
-    + calculoTicket(ruta, kilometros, ticket_precio_base)
+    + calculoTicket(ruta, kilometros, ticket_precio_base) : Double
 }
 
 class conductor {
-    - nombre
-    - salario
+    - nombre : String
+    - salario : Double
 }
 
 autobuses <|-- autobus_interurbano
