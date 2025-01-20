@@ -5,7 +5,7 @@ abstract class autobuses {
     - conductor : String
     - ticket_precio_base : Double
     --Metodos--
-    + {abstract} calcularSuperrecio() : Double
+    + {abstract} calcularSuperPrecio() : Double
 }
 
 class autobus_urbano {
