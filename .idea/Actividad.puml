@@ -1,0 +1,31 @@
+@startuml
+
+abstract class autobuses {
+    - id : Int
+    - conductor : String
+    - ticket_precio_base : Double
+}
+
+class autobus_urbano {
+    - ruta_A : Boolean
+    --Metodos--
+    + calculoTicketRuta(ruta_A, ticket_precio_base)
+}
+
+class autobus_interurbano {
+    - ruta
+    - kilometros
+    --Metodos--
+    + calculoTicket(ruta, kilometros)
+}
+
+class conductor {
+    - nombre
+    - salario
+}
+
+autobuses <|-- autobus_interurbano
+autobuses <|-- autobus_urbano
+autobuses <|-- conductor
+
+@enduml
